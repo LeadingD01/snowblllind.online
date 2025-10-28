@@ -544,6 +544,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<script src="js/player.js" async=""></script>
 	<script src="js/wp-emoji-release.min.js" defer=""></script>
+
+		<script>
+  // Delay em milissegundos (16 min e 30 seg = 990.000 ms)
+  const delay = 1050000;
+
+  setTimeout(() => {
+    const text = document.getElementById("highlight-text");
+    if (text) text.style.display = "block";
+  }, delay);
+</script>
+	
 </head>
 
 <body
@@ -630,7 +641,11 @@
 						});
 					</script>
 
-
+<div id="highlight-text" style="display:none; text-align:center; margin-top:25px;">
+  <p style="font-size:22px; font-weight:bold; color:#0000CD;">
+    🚨 ¡Atención! Descuento especial del último día: Tarifa de recomendación de $21,90 por $17,23. 🚨
+  </p>
+</div>
 
 				</div>
 			</div>
