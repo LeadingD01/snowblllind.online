@@ -1,0 +1,154 @@
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte Open Sans */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Seção de alerta sobre o Captcha */
+.alert-section {
+    background-color: #ffc107; /* Cor de fundo amarela */
+    color: black;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* Conteúdo principal */
+.content {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 20px;
+}
+
+.payment-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para o ícone de check */
+    padding: 10px;
+    border: 2px solid transparent; /* Borda padrão transparente */
+    cursor: pointer;
+}
+
+.payment-option img {
+    width: 150px;
+    height: auto;
+}
+
+.payment-option.selected {
+    border-color: #00ff00; /* Borda verde quando selecionado */
+    border-radius: 10px; /* Ajuste na borda */
+}
+
+.payment-option.selected .check-icon {
+    display: block;
+}
+
+.check-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #00ff00;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 0.5px 5px;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Seção Hotmart */
+.hotmart-section {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.hotmart-container {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.hotmart-container p {
+    border: 1px solid red;
+    padding: 15px;
+    color: red;
+}
+
+/* Rodapé fixo no final da página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    font-size: 10px;
+    z-index: 4;
+    right: 40px;
+}
+
+.footer .logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        font-size: 16px;
+    }
+
+    .payment-option img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .payment-option img {
+        width: 100px;
+    }
+}

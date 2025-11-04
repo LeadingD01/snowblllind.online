@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa a fonte Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Aviso sobre Captcha -->
+    <section class="alert-section">
+        <p>⚠️ Último paso: Tu cuenta de Youtube Rewards aún no está activada.</p>
+    </section>
+
+    <!-- Instruções de pagamento -->
+    <main class="content">
+        <h3>Espera: falta (1) paso para completar tu pedido.</h3>
+        <h3>Selecciona tu método de pago abajo y haz clic en el botón verde para continuar.</h3>
+        
+        <!-- Botões de método de pagamento -->
+        <div class="payment-methods">
+            <div class="payment-option" data-method="bank-transfer">
+                <img src="https://s3.typebot.io/public/workspaces/clpwrgv88001vlh0fl3wduaqz/typebots/clsoykmoc0001o1a8fuuy3j8r/blocks/wy8ohf1elsc5ppxhqhpypbqc?v=1729295892054" alt="Bank Transfer">
+                <span class="check-icon">✔</span> <!-- Ícone de check -->
+            </div>
+            <div class="payment-option" data-method="paypal">
+                <img src="https://s3.typebot.io/public/workspaces/clpwrgv88001vlh0fl3wduaqz/typebots/clsoykmoc0001o1a8fuuy3j8r/blocks/x3vmok95fngwjtdnhlymue44?v=1729295897718" alt="PayPal">
+                <span class="check-icon">✔</span> <!-- Ícone de check -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Seção Hotmart -->
+        <div>
+            <div id="hotmart-container">
+                <div id="box_hotmart">
+                    <!-- HOTMART - Sales Funnel Widget -->
+                    <!--- sales funnel container ---> 
+                    <div id="hotmart-sales-funnel"></div> 
+                    <!--- script load and setup ---> 
+                    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script> 
+                    <script> 
+                        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+                    </script> 
+                    <!-- HOTMART - Sales Funnel Widget -->
+                </div>
+                <div id="cover"></div>
+                <div id="cover2"></div>
+                <!-- Barra principal para esconder parte do conteúdo -->
+            </div>
+        
+            <style>
+                /* Container do widget Hotmart */
+                #hotmart-container {
+                    position: relative;
+                    width: 100%;
+                    max-width: 650px;
+                    height: 420px;
+                    margin: 0 auto;
+                }
+        
+                /* Estilo para o iframe do widget */
+                #box_hotmart {
+                    width: 100%;
+                    height: 100%;
+                }
+        
+                /* Cobre o conteúdo com uma camada branca */
+                #cover {
+                    position: absolute;
+                    top: 240px; /* Ajuste conforme necessário para a posição vertical da cobertura */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 650px; /* Largura da barra principal */
+                    height: 220px; /* Altura da barra principal */
+                    background-color: #FFFFFF; /* Cor branca sólida */
+                    z-index: 3; /* Superior ao conteúdo do iframe */
+                }
+
+                #cover2 {
+                    position: absolute;
+                    top: 0px; /* Ajuste conforme necessário para a posição vertical da cobertura */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 650px; /* Largura da barra principal */
+                    height: 180px; /* Altura da barra principal */
+                    background-color: #FFFFFF; /* Cor branca sólida */
+                    z-index: 3; /* Superior ao conteúdo do iframe */
+                }
+        
+                /* Responsividade para ajustar o tamanho da cobertura no mobile */
+                @media (max-width: 768px) {
+                    #cover {
+                        width: 100%; /* Ajusta a largura da cobertura no mobile */
+                    }
+                }
+            </style>
+        </div>        
+
+    <!-- Rodapé Fixo -->
+    <footer class="footer">
+        <img src="E:\Ofertas\Renda Extra\Youtube Tools ESP\Estrutura\upsell\upsell YT RW esp\up2\images/logo.jpg" alt="Logo" class="logo">
+        <div class="footer-links">
+            <a href="#">Privacy policy</a> /
+            <a href="#">Terms of use</a>
+        </div>
+        <p>© 2025 All rights reserved</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="/js/hotmart.upsell_checkout.js"></script>
+    <script src="/js/hotmart.upsell_checkout-1.js"></script>
+    <script src="/js/hotmart.upsell_checkout-2.js"></script>
+    <script src="/js/hotmart.upsell_checkout-3.js"></script>
+
+</body>
+</html>
